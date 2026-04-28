@@ -3,17 +3,17 @@ import { useEffect, useRef, useState } from 'react'
 const STEPS = [
   {
     n: '01', icon: '🌐', title: '爬取攻略',
-    mod: 'GuideFetcher', color: 'text-sky-400', border: 'border-sky-800/40 bg-sky-950/20',
+    mod: 'GuideFetcher', color: 'text-orange-400', border: 'border-orange-800/40 bg-orange-950/20',
     lines: ['requests + BeautifulSoup', '爬取 B站维基游戏攻略', '支持主线 / 日常 / 副本 / BOSS', '结构化提取章节内容'],
   },
   {
     n: '02', icon: '🤖', title: 'AI 解析动作',
-    mod: 'ActionParser × MIMO', color: 'text-yellow-400', border: 'border-yellow-800/40 bg-yellow-950/20',
+    mod: 'ActionParser × MIMO', color: 'text-orange-400', border: 'border-orange-800/40 bg-orange-950/20',
     badge: 'MIMO', lines: ['调用 mimo-v2.5-pro 模型', '攻略文本 → JSON 动作序列', '支持 12 种动作类型', '自动处理游戏 UI 布局'],
   },
   {
     n: '03', icon: '📱', title: '感知游戏状态',
-    mod: 'GameAutomation', color: 'text-green-400', border: 'border-green-800/40 bg-green-950/20',
+    mod: 'GameAutomation', color: 'text-red-400', border: 'border-red-800/40 bg-red-950/20',
     lines: ['ADB 截取当前屏幕', 'OCR 识别界面文字位置', 'OpenCV 图像模板匹配', '智能等待画面稳定'],
   },
   {
@@ -36,7 +36,7 @@ export default function AgentLoop() {
     <section className="py-24 px-4">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-14">
-          <p className="text-violet-400 text-xs font-mono uppercase tracking-widest mb-3">Agent 架构</p>
+          <p className="text-orange-400 text-xs font-mono uppercase tracking-widest mb-3">Agent 架构</p>
           <h2 className="text-4xl sm:text-5xl font-black text-white mb-3">感知 · 推理 · 执行</h2>
           <p className="text-slate-400 text-lg">四步闭环，MIMO 模型负责推理规划，ADB 负责执行</p>
         </div>
