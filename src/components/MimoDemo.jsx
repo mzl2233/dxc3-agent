@@ -80,12 +80,12 @@ export default function MimoDemo() {
     <section className="py-24 px-4" style={{ background: 'linear-gradient(to bottom, transparent, rgba(88,28,220,0.04), transparent)' }}>
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-12">
-          <p className="text-yellow-400 text-xs font-mono uppercase tracking-widest mb-3">核心 AI 组件</p>
+          <p className="text-orange-400 text-xs font-mono uppercase tracking-widest mb-3">核心 AI 组件</p>
           <h2 className="text-4xl sm:text-5xl font-black text-white mb-3">
             MIMO 解析演示
           </h2>
           <p className="text-slate-400 text-lg">
-            攻略文本 → <span className="text-yellow-400 font-mono">mimo-v2.5-pro</span> → 可执行 JSON 动作序列
+            攻略文本 → <span className="text-orange-400 font-mono">mimo-v2.5-pro</span> → 可执行 JSON 动作序列
           </p>
         </div>
 
@@ -93,7 +93,7 @@ export default function MimoDemo() {
           {CASES.map((c, i) => (
             <button key={c.label} onClick={() => setActive(i)}
               className={`px-4 py-1.5 rounded-lg text-sm transition-all ${
-                active === i ? 'bg-violet-700 text-white' : 'bg-slate-800 text-slate-400 hover:bg-slate-700'
+                active === i ? 'bg-orange-700 text-white' : 'bg-slate-800 text-slate-400 hover:bg-slate-700'
               }`}>
               {c.label}
             </button>
@@ -112,11 +112,11 @@ export default function MimoDemo() {
           </div>
 
           <div className="flex flex-col gap-2">
-            <div className="flex items-center gap-2 px-3 py-2 bg-yellow-950/30 border border-yellow-800/30 rounded-xl">
-              <span className="text-yellow-400 text-sm">🤖</span>
-              <span className="text-yellow-300 text-xs font-mono">mimo-v2.5-pro 解析中</span>
-              <ChevronRight size={14} className="text-yellow-600 ml-auto" />
-              <span className="text-yellow-400 text-xs font-mono">{c.actions.length} 个动作</span>
+            <div className="flex items-center gap-2 px-3 py-2 bg-orange-950/30 border border-orange-800/30 rounded-xl">
+              <span className="text-orange-400 text-sm">🤖</span>
+              <span className="text-orange-300 text-xs font-mono">mimo-v2.5-pro 解析中</span>
+              <ChevronRight size={14} className="text-orange-600 ml-auto" />
+              <span className="text-orange-400 text-xs font-mono">{c.actions.length} 个动作</span>
             </div>
             <div className="term flex-1">
               <div className="term-bar">
