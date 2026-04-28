@@ -2,11 +2,11 @@ import { useState, useEffect, useRef } from 'react'
 import { Play, RotateCcw } from 'lucide-react'
 
 const LOG = [
-  { t: 0,     c: 'text-violet-300', s: '=== 地下城堡3 AI Agent 启动 ===' },
+  { t: 0,     c: 'text-orange-300', s: '=== 地下城堡3 AI Agent 启动 ===' },
   { t: 300,   c: 'text-slate-400',  s: '[GuideFetcher] 请求 wiki.biligame.com/dxcb3...' },
   { t: 900,   c: 'text-green-400',  s: '[GuideFetcher] ✓ 日常活动攻略获取成功 (3218 bytes)' },
   { t: 1200,  c: 'text-slate-400',  s: '[ActionParser] 发送至 mimo-v2.5-pro...' },
-  { t: 2100,  c: 'text-yellow-300', s: '[MIMO] ✓ 解析完成 → 12 个动作' },
+  { t: 2100,  c: 'text-amber-300', s: '[MIMO] ✓ 解析完成 → 12 个动作' },
   { t: 2400,  c: 'text-slate-400',  s: '[GameAutomation] ADB 连接 emulator-5554...' },
   { t: 2900,  c: 'text-green-400',  s: '[GameAutomation] ✓ 已连接，游戏运行中' },
   { t: 3100,  c: 'text-slate-400',  s: '[执行 1/12] tap_zone "日常入口"' },
@@ -27,7 +27,7 @@ const LOG = [
   { t: 9700,  c: 'text-slate-400',  s: '  等待战斗结束 (30s)...' },
   { t: 10400, c: 'text-green-400',  s: '  ✓ OCR 检测到奖励界面' },
   { t: 10800, c: 'text-slate-400',  s: '[执行 12/12] tap_zone "返回主城"' },
-  { t: 11300, c: 'text-yellow-300', s: '✅ 全部完成 · 耗时 86s · 0 次人工介入' },
+  { t: 11300, c: 'text-amber-300', s: '✅ 全部完成 · 耗时 86s · 0 次人工介入' },
 ]
 
 export default function RunLog() {
@@ -62,7 +62,7 @@ export default function RunLog() {
           <p className="text-slate-400 text-lg">点击 Run 查看从获取攻略到完成任务的全过程</p>
         </div>
 
-        <div className="term purple-glow">
+        <div className="term red-glow">
           <div className="term-bar justify-between">
             <div className="flex items-center gap-2">
               <div className="dot bg-red-500" /><div className="dot bg-yellow-500" /><div className="dot bg-green-500" />
@@ -87,11 +87,11 @@ export default function RunLog() {
             {LOG.slice(0, shown).map((l, i) => (
               <p key={i} className={`font-mono text-xs sm:text-sm leading-relaxed ${l.c}`}>{l.s}</p>
             ))}
-            {running && shown < LOG.length && <span className="font-mono text-xs text-yellow-400 blink">█</span>}
+            {running && shown < LOG.length && <span className="font-mono text-xs text-orange-400 blink">█</span>}
           </div>
 
           <div className="px-4 py-2 border-t border-slate-800/50 flex flex-wrap gap-4 text-xs font-mono text-slate-600">
-            <span><span className="text-yellow-400">MIMO</span> = AI 解析</span>
+            <span><span className="text-orange-400">MIMO</span> = AI 解析</span>
             <span><span className="text-sky-400">OCR</span> = 视觉识别</span>
             <span><span className="text-slate-400">ADB</span> = 模拟器指令</span>
             <span><span className="text-green-400">✓</span> = 验证成功</span>
