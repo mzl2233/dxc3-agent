@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 
 const TECH = [
-  { name: 'mimo-v2.5-pro', role: 'AI 推理引擎', detail: '小米 MIMO 大模型，将攻略自然语言转换为结构化 JSON 动作序列', badge: 'AI Core', bc: 'bg-yellow-500/15 border-yellow-500/30 text-yellow-400', c: 'text-yellow-400', b: 'border-yellow-800/30 bg-yellow-950/15' },
+  { name: 'mimo-v2.5-pro', role: 'AI 推理引擎', detail: '小米 MIMO 大模型，将攻略自然语言转换为结构化 JSON 动作序列', badge: 'AI Core', bc: 'bg-orange-500/15 border-orange-500/30 text-orange-400', c: 'text-orange-400', b: 'border-orange-800/30 bg-orange-950/15' },
   { name: 'ADB (Android Debug Bridge)', role: '模拟器控制', detail: '通过 ADB 协议连接雷电模拟器，发送 tap/swipe/key 等指令控制游戏', badge: 'Control', bc: 'bg-green-500/15 border-green-500/30 text-green-400', c: 'text-green-400', b: 'border-green-800/30 bg-green-950/15' },
   { name: 'EasyOCR / PaddleOCR', role: '屏幕文字识别', detail: '识别游戏界面当前显示的文字，定位按钮坐标，验证操作是否成功', badge: 'Vision', bc: 'bg-sky-500/15 border-sky-500/30 text-sky-400', c: 'text-sky-400', b: 'border-sky-800/30 bg-sky-950/15' },
   { name: 'OpenCV', role: '图像模板匹配', detail: '与 OCR 互补，识别图标/按钮等没有文字的 UI 元素', badge: 'Vision', bc: 'bg-sky-500/15 border-sky-500/30 text-sky-400', c: 'text-sky-400', b: 'border-sky-800/30 bg-sky-950/15' },
@@ -29,7 +29,7 @@ export default function Modules() {
     <section className="py-24 px-4">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-14">
-          <p className="text-sky-400 text-xs font-mono uppercase tracking-widest mb-3">技术栈</p>
+          <p className="text-orange-400 text-xs font-mono uppercase tracking-widest mb-3">技术栈</p>
           <h2 className="text-4xl sm:text-5xl font-black text-white mb-3">项目组成</h2>
         </div>
 
@@ -38,7 +38,7 @@ export default function Modules() {
             <div key={s.l} className={`text-center p-5 rounded-2xl bg-slate-900/40 border border-slate-800/50
               transition-all duration-500 ${vis ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
               style={{ transitionDelay: `${i * 70}ms` }}>
-              <div className="text-3xl font-black mb-1 gold">{s.v}</div>
+              <div className="text-3xl font-black mb-1 orange-text">{s.v}</div>
               <div className="text-slate-500 text-xs">{s.l}</div>
             </div>
           ))}
